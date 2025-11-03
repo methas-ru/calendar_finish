@@ -109,7 +109,6 @@ export default function Calendar({ user }) {
                   d.getMonth() === today.getMonth() &&
                   d.getDate() === today.getDate();
 
-                // เลือก appointment เฉพาะวันนั้น และเรียงตามเวลา
                 const dayAppointments = appointments
                   .filter((a) => {
                     try {
