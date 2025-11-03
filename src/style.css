@@ -1,0 +1,44 @@
+:root{
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --accent: #2b6ef6;
+    --muted: #bfc7d6;
+  }
+  body, html, #root { height:100%; margin:0; font-family: Inter, Roboto, Arial, sans-serif; background:var(--bg); color:#222; }
+  .app { max-width:980px; margin:20px auto; padding:12px; }
+  .calendar-container { display:block; }
+  .cal-header { display:flex; align-items:center; gap:12px; margin-bottom:8px; }
+  .cal-header button { padding:6px 10px; border-radius:6px; border:1px solid #ddd; background:transparent; cursor:pointer; }
+  .month-title { font-weight:600; font-size:18px; }
+  .cal-grid { background:var(--card); padding:12px; border-radius:8px; }
+  .week-days { display:grid; grid-template-columns: repeat(7, 1fr); text-align:center; gap:6px; margin-bottom:8px; color:var(--muted); }
+  .week-row { display:grid; grid-template-columns: repeat(7, 1fr); gap:6px; }
+  .day-cell { min-height:80px; padding:8px; border-radius:8px; background:linear-gradient(180deg,#fff,#fafbff); border:1px solid rgba(0,0,0,0.04); position:relative; }
+  .day-cell.muted { opacity:0.45; }
+  .day-cell.today { box-shadow: inset 0 0 0 2px rgba(43,110,246,0.08); }
+  .day-number { font-weight:600; }
+  @media (max-width:700px) {
+    .day-cell { min-height:64px; padding:6px; }
+  }
+  .day-cell {
+    border: 1px solid #ccc;
+    min-height: 60px;
+    position: relative;
+  }
+  .appointment-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .today {
+    background-color: #e0f7fa;
+  }
+  .muted {
+    color: #aaa;
+  }
+  
